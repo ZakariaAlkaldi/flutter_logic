@@ -15,8 +15,8 @@ class _RootState extends State<Root> {
   final PageController controller = PageController();
   List<Widget> screens = [
     SingleSelection(),
-    ToggleSelection(),
     MultiImageSelect(),
+    ToggleSelection(),
     MultiSelection(),
   ];
   int selectedIndex = 0;
@@ -25,6 +25,7 @@ class _RootState extends State<Root> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
         controller: controller,
         children: screens,
         onPageChanged: (value) {
