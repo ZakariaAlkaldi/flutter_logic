@@ -29,9 +29,9 @@ class _SingleSelectionState extends State<SingleSelection> {
           itemCount: gifts.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,
-            mainAxisSpacing: 30,
+            mainAxisSpacing: 10,
             crossAxisSpacing: 8,
-            childAspectRatio: 0.8,
+            childAspectRatio: 0.6,
           ),
           itemBuilder: (context, index) {
             return GestureDetector(
