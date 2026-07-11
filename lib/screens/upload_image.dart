@@ -11,7 +11,7 @@ class UploadImage extends StatefulWidget {
 }
 
 class _UploadImageState extends State<UploadImage> {
-  XFile? SelectedImage;
+  XFile? selectedImage;
 
   Future<void> _uploadImage() async {
     final pickedImage = await ImagePicker().pickImage(
@@ -19,7 +19,7 @@ class _UploadImageState extends State<UploadImage> {
     );
 
     setState(() {
-      SelectedImage = pickedImage;
+      selectedImage = pickedImage;
     });
   }
 
@@ -43,8 +43,8 @@ class _UploadImageState extends State<UploadImage> {
                 ),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: SelectedImage != null
-                  ? Image.file(File(SelectedImage!.path), fit: BoxFit.cover)
+              child: selectedImage != null
+                  ? Image.file(File(selectedImage!.path), fit: BoxFit.cover)
                   : null,
             ),
             SizedBox(height: 10),
@@ -64,7 +64,7 @@ class _UploadImageState extends State<UploadImage> {
                 ),
                 child: Center(
                   child: Text(
-                    SelectedImage == null ? "Upload Image" : "Change Image",
+                    selectedImage == null ? "Upload Image" : "Change Image",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 15,
@@ -75,11 +75,11 @@ class _UploadImageState extends State<UploadImage> {
               ),
             ),
             SizedBox(height: 10),
-            if (SelectedImage != null)
+            if (selectedImage != null)
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    SelectedImage = null;
+                    selectedImage = null;
                   });
                 },
                 child: Container(
@@ -96,7 +96,7 @@ class _UploadImageState extends State<UploadImage> {
                   ),
                   child: Center(
                     child: Text(
-                      SelectedImage == null ? "Upload Image" : "Change Image",
+                      selectedImage == null ? "Upload Image" : "Change Image",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 15,
