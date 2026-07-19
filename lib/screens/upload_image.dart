@@ -47,6 +47,7 @@ class _UploadImageState extends State<UploadImage> {
                   ? Image.file(File(selectedImage!.path), fit: BoxFit.cover)
                   : null,
             ),
+           
             SizedBox(height: 10),
             GestureDetector(
               onTap: _uploadImage,
@@ -74,6 +75,7 @@ class _UploadImageState extends State<UploadImage> {
                 ),
               ),
             ),
+            
             SizedBox(height: 10),
             if (selectedImage != null)
               GestureDetector(
