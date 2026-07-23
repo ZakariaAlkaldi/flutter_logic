@@ -40,7 +40,9 @@ class _UploadVideoState extends State<UploadVideo> {
 
   @override
   void dispose() {
-    _controller!.dispose();
+    if (_controller != null) {
+      _controller!.dispose();
+    }
     super.dispose();
   }
 

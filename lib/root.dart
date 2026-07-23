@@ -3,9 +3,10 @@ import 'package:flutter_logic/screens/multi_image_select.dart';
 import 'package:flutter_logic/screens/multi_selection.dart';
 import 'package:flutter_logic/screens/single_selection.dart';
 import 'package:flutter_logic/screens/toggle_selection.dart';
+import 'package:flutter_logic/screens/upload_file.dart';
 import 'package:flutter_logic/screens/upload_image.dart';
-import 'package:flutter_logic/upload_multi_imgs.dart';
-import 'package:flutter_logic/upload_video.dart';
+import 'package:flutter_logic/screens/upload_multi_imgs.dart';
+import 'package:flutter_logic/screens/upload_video.dart';
 
 class Root extends StatefulWidget {
   const Root({super.key});
@@ -24,6 +25,7 @@ class _RootState extends State<Root> {
     UploadImage(),
     UploadMultiImgs(),
     UploadVideo(),
+    UploadFile(),
   ];
   int selectedIndex = 0;
 
