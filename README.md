@@ -1,68 +1,43 @@
 # Flutter Logic
 
-Flutter Logic is a small Flutter demo app that showcases multiple UI patterns and media picker interactions in one project. The app uses a simple `PageView` navigation flow and lets the user move between different example screens with the Next and Back controls.
+Flutter Logic is a Flutter demo application that combines several interactive UI examples in one app. It uses a simple page-based navigation flow to move through multiple screens that demonstrate selection patterns and media upload actions.
 
-## Project purpose
+## What this project includes
 
-This project is mainly a learning and UI demonstration app. It covers:
+The app currently contains eight demo screens:
 
-- single-item selection
-- multi-item selection
-- toggle/follow actions
-- image picker and preview
-- multi-image picker
-- video picker and playback
-- file picker with open / change / delete actions
-
-## Main screens
-
-### 1. Single Selection
-
-A grid of animal cards where the user can choose only one item at a time. The selected item is highlighted and shows a `Send` button style card.
-
-### 2. Multi Image Select
-
-A preview screen with a large selected image and a horizontal list of thumbnails. Tapping any thumbnail updates the main preview.
-
-### 3. Toggle Selection
-
-A profile-style screen with an avatar and a floating action button. Pressing the button toggles the follow state between add and checked icons.
-
-### 4. Multi Selection
-
-A category selection screen using clickable chips. The user can select multiple categories, and each selected category receives a check mark indicator.
-
-### 5. Upload Image
-
-A gallery image picker demo. The user can select an image, see it in a preview box, replace it, or remove it.
-
-### 6. Upload Multi Images
-
-A multi-image upload example. The screen shows three preview slots and allows the user to pick up to three images at once.
-
-### 7. Upload Video
-
-A video picker demo using `video_player`. The user can select a video from the gallery and watch it inside the app.
-
-### 8. Upload File
-
-A file upload screen using `file_picker`. It supports `pdf`, `docx`, and `doc` files. The user can upload, view, replace, and delete the selected file.
+- Single selection: choose one item from a grid of animal cards
+- Multi image selection: preview a selected image and switch between thumbnails
+- Toggle/follow interaction: toggle a follow state with a button
+- Multi selection: choose several options using selectable chips
+- Upload image: pick an image from the gallery and preview it
+- Upload multiple images: select up to three images and preview them
+- Upload video: pick a video and play it inside the app
+- Upload file: choose supported files such as PDF, DOCX, and DOC, then view or replace them
 
 ## App structure
 
-- `lib/main.dart` — app entry point
-- `lib/root.dart` — page navigation and the bottom navigation flow between screens
-- `lib/screens/` — all screen implementations
+- lib/main.dart — app entry point
+- lib/root.dart — main page navigation flow with previous/next screen controls
+- lib/screens/ — all demo screen implementations
 
-## Technologies used
+## Main technologies
+
+This project uses:
 
 - Flutter
 - Material Design widgets
-- `image_picker`
-- `video_player`
-- `file_picker`
-- `open_file`
-- `flutter_svg`
+- image_picker for image selection
+- video_player for video playback
+- file_picker for file selection
+- open_file for opening selected files
+- flutter_svg for SVG assets
+- syncfusion_flutter_pdfviewer for PDF preview
+
+## Requirements
+
+- Flutter SDK: ^3.11.4
+- Dependencies are managed through pubspec.yaml
 
 ## Run the project
 
@@ -70,11 +45,11 @@ A file upload screen using `file_picker`. It supports `pdf`, `docx`, and `doc` f
    ```bash
    flutter pub get
    ```
-2. Start the app:
+2. Run the app:
    ```bash
    flutter run
    ```
 
 ## Notes
 
-This app is a UI practice project and demonstrates how to implement common selection and media upload patterns in Flutter.
+This project is mainly a UI learning and practice app focused on common Flutter interactions, media handling, and reusable screen patterns.

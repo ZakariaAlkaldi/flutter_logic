@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:open_file/open_file.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class UploadFile extends StatefulWidget {
   const UploadFile({super.key});
@@ -137,11 +140,17 @@ class _UploadFileState extends State<UploadFile> {
                         ];
                       },
                     ),
-                    
                   ],
                 ),
               ),
             ),
+            SizedBox(height: 10),
+            if (_filePath != null && _filePath!.endsWith('pdf'))
+              SizedBox(
+                width: 230,
+                height: 400,
+                child: SfPdfViewer.file(File(_filePath!)),
+              ),
           ],
         ),
       ),
